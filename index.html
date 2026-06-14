@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>e-Portfolio | Abdullah Harith Bin Khairuddin</title>
+    <style>
+        :root {
+            --primary: #AB47BC; /* Light Purple */
+            --primary-dark: #6A1B9A; /* Deep Purple for Headers */
+            --secondary: #8E24AA; /* Vitality Purple */
+            --bg-light: #F3E5F5; /* Soft Pale Purple Background */
+            --text-main: #333333;
+            --text-light: #666666;
+            --white: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Sticky Navigation */
+        nav {
+            background-color: var(--white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+        }
+
+        /* Layout & Sections */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            padding: 4rem 0;
+            border-bottom: 2px solid #E0E0E0;
+        }
+
+        h1, h2 {
+            color: var(--primary-dark);
+            margin-bottom: 1.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+        }
+
+        p {
+            margin-bottom: 1rem;
+        }
+
+        /* Profile Section */
+        .profile-header {
+            text-align: center;
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .sdg-badge {
+            display: inline-block;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+
+        /* Grid for Cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+        }
+
+        .card h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--text-main);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+        }
+
+        /* Video Embeds */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Tags for Skills */
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+        }
+
+        .tag {
+            background: var(--primary);
+            color: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--text-main);
+            color: var(--white);
+            margin-top: 2rem;
+        }
+
+        @media (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+                gap: 1rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#labs">Labs</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#reflection">Reflection</a></li>
+            <li><a href="#skills">Skills & Resources</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        
+        <section id="home">
+            <div class="profile-header">
+                <h1>Abdullah Harith Bin Khairuddin</h1>
+                <p><strong>Matric No:</strong> A221072</p>
+                <p><strong>Programme:</strong> Software Engineering (Kejuruteraan Perisian)</p>
+                <p><strong>Instructor:</strong> Nelson Budin Sana</p>
+                <br>
+                <p>I am a Software Engineering student at UKM with a passion for building impactful mobile applications. My focus is on creating intuitive, data-driven Android ecosystems that solve real-world problems.</p>
+                
+                <div class="sdg-badge">SDG 3: Good Health and Well-being</div>
+                <p style="margin-top: 1rem; font-style: italic;">"Because holistic health requires accessible, localized, and consistent habit tracking to empower communities."</p>
+            </div>
+        </section>
+
+        <section id="labs">
+            <h2>Lab Submissions</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/lcozhfc94Jg" allowfullscreen title="Lab 1 Video"></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lab 1: UI Foundations</h3>
+                        <p><strong>Reflection:</strong> Learned the basics of building user interfaces in Android. Understanding how to structure layouts was the critical first step in mobile development.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/zNYZk7QpMqA" allowfullscreen title="Lab 2 Video"></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lab 2: Interaction</h3>
+                        <p><strong>Reflection:</strong> Explored event handling and user interactions. Implementing clickable areas and managing basic state made the static UI come alive.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/S7T6KA2QV2o" allowfullscreen title="Lab 3 Video"></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lab 3: Material Design</h3>
+                        <p><strong>Reflection:</strong> Focused on aesthetics and user experience by implementing Material Design guidelines. This lab significantly improved my understanding of professional app visual standards.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/39DP97V-MHw" allowfullscreen title="Lab 4 Video"></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lab 4: Navigation</h3>
+                        <p><strong>Reflection:</strong> Mastered Navigation Compose to move seamlessly between multiple screens. Learning to pass state safely without data loss was a major breakthrough.</p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/FnbPqEhKi3s" allowfullscreen title="Lab 5 Video"></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Lab 5: Room Database</h3>
+                        <p><strong>Reflection:</strong> Implemented local persistence using Room. Understanding DAOs, Entities, and Coroutines was challenging but essential for creating offline-capable applications.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Major Projects</h2>
+            <div class="grid">
+                
+                <div class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/9mQsBNtNMqY" allowfullscreen title="Project 1 Video"></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Project 1: VitalityApp Prototype</h3>
+                        <p><strong>Problem:</strong> Many individuals struggle with inconsistent health management because they lack a single, centralized tool to track physical habits and mental reflections.</p>
+                        <p><strong>Lessons Learned:</strong> Successfully built a multi-screen application using Jetpack Compose and Navigation. I learned how to share and hoist state using a centralized ViewModel to ensure user data survives screen rotations.</p>
+                        <a href="https://github.com/Harith041004/A221072_ABDULLAHHARITH_MrNelson_Project1" class="btn" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="video-container">
+                        <iframe src="https://www.youtube.com/embed/cE8InVA3Aa4" allowfullscreen title="Project 2 Video"></iframe>
+                    </div>
+                    <div class="card-content">
+                        <h3>Project 2: VitalityApp Ecosystem</h3>
+                        <p><strong>Problem:</strong> Expanding on Project 1, users need their fitness actions verified and synced remotely to stay motivated within a community.</p>
+                        <p><strong>Lessons Learned:</strong> Integrated advanced hardware sensors using Google ML Kit (CameraX Face Detection) to track push-ups. I successfully connected a local Room database with remote Firebase Firestore and utilized Retrofit to fetch live REST API data.</p>
+                        <a href="https://github.com/Harith041004/A221072_ABDULLAHHARITH_MrNelson_PROJECT2" class="btn" target="_blank">View on GitHub</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="reflection">
+            <h2>Reflection & Learning Journey</h2>
+            <div class="profile-header" style="text-align: left;">
+                <p>From Lab 1 to Project 2, my journey evolved from building simple static UIs to developing a complete, data-driven Android ecosystem. I overcame significant technical challenges, particularly in managing complex state across 7 screens and implementing advanced hardware sensors via Google ML Kit.</p>
+                <p>Building VitalityApp demonstrated how mobile technology can directly impact SDG 3 by fostering better health habits in the community. Learning to integrate Room for local persistence, Firebase for cloud syncing, and Retrofit for live APIs has given me the confidence and skills to architect production-ready software.</p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Tech Stack</h2>
+            <div class="skill-tags">
+                <span class="tag">Kotlin</span>
+                <span class="tag">Jetpack Compose</span>
+                <span class="tag">Navigation Compose</span>
+                <span class="tag">Room Database</span>
+                <span class="tag">Retrofit & REST APIs</span>
+                <span class="tag">Firebase Firestore</span>
+                <span class="tag">Google ML Kit (Face Detection)</span>
+                <span class="tag">CameraX</span>
+                <span class="tag">ViewModel & State Hoisting</span>
+            </div>
+
+            <h3 style="text-align: center; margin-top: 3rem; color: var(--primary-dark);">Resources & Acknowledgements</h3>
+            <div class="profile-header" style="text-align: center; margin-top: 1rem;">
+                <p><strong>APIs & Libraries:</strong> ZenQuotes REST API, Google ML Kit Vision API, AndroidX Camera Libraries, Firebase Android SDK.</p>
+                <p><strong>Acknowledgements:</strong> AI assistance was utilized for debugging complex recomposition UI issues, verifying UML/DFD documentation architecture, and structuring formatting for this e-Portfolio.</p>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Abdullah Harith Bin Khairuddin | Matric: A221072</p>
+        <p>Universiti Kebangsaan Malaysia (UKM)</p>
+    </footer>
+
+</body>
+</html>
