@@ -128,11 +128,22 @@
         .card-content {
             padding: 1.5rem;
             flex-grow: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .card h3 {
             color: var(--secondary);
             margin-bottom: 0.5rem;
+        }
+
+        /* Buttons & Actions */
+        .action-row {
+            display: flex;
+            gap: 10px;
+            margin-top: auto; /* Pushes buttons to the bottom of the card */
+            padding-top: 1rem;
+            flex-wrap: wrap;
         }
 
         .btn {
@@ -143,12 +154,24 @@
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
-            margin-top: 1rem;
-            transition: background 0.3s;
+            transition: all 0.3s ease;
+            text-align: center;
         }
 
         .btn:hover {
             background-color: var(--primary);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary-dark);
+            border: 2px solid var(--primary-dark);
+            padding: calc(0.5rem - 2px) calc(1rem - 2px); /* Adjusts for border width */
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--primary-dark);
+            color: var(--white);
         }
 
         /* Video Embeds */
@@ -243,6 +266,9 @@
                     <div class="card-content">
                         <h3>Lab 1: UI Foundations</h3>
                         <p><strong>Reflection:</strong> Learned the basics of building user interfaces in Android. Understanding how to structure layouts was the critical first step in mobile development.</p>
+                        <div class="action-row">
+                            <a href="https://drive.google.com/drive/folders/1iR_tegbVRVWzzqxPjHuBu-qGKkiFPfi_?usp=sharing" class="btn btn-secondary" target="_blank">📂 Screen Folder</a>
+                        </div>
                     </div>
                 </div>
 
@@ -253,6 +279,9 @@
                     <div class="card-content">
                         <h3>Lab 2: Interaction</h3>
                         <p><strong>Reflection:</strong> Explored event handling and user interactions. Implementing clickable areas and managing basic state made the static UI come alive.</p>
+                        <div class="action-row">
+                            <a href="https://drive.google.com/drive/folders/1KZVfieZS5DtinhiMzmPfDU-1naVPFwQy?usp=sharing" class="btn btn-secondary" target="_blank">📂 Screen Folder</a>
+                        </div>
                     </div>
                 </div>
 
@@ -263,6 +292,9 @@
                     <div class="card-content">
                         <h3>Lab 3: Material Design</h3>
                         <p><strong>Reflection:</strong> Focused on aesthetics and user experience by implementing Material Design guidelines. This lab significantly improved my understanding of professional app visual standards.</p>
+                        <div class="action-row">
+                            <a href="https://drive.google.com/drive/folders/1EQB-hto8AwSraVFTQ2WJSFIvizJds9ih?usp=sharing" class="btn btn-secondary" target="_blank">📂 Screen Folder</a>
+                        </div>
                     </div>
                 </div>
 
@@ -273,6 +305,9 @@
                     <div class="card-content">
                         <h3>Lab 4: Navigation</h3>
                         <p><strong>Reflection:</strong> Mastered Navigation Compose to move seamlessly between multiple screens. Learning to pass state safely without data loss was a major breakthrough.</p>
+                        <div class="action-row">
+                            <a href="https://drive.google.com/drive/folders/1UoOCQN5Jvh17Q7ywBYmOjjJoxbIVOSi3?usp=sharing" class="btn btn-secondary" target="_blank">📂 Screen Folder</a>
+                        </div>
                     </div>
                 </div>
 
@@ -283,6 +318,9 @@
                     <div class="card-content">
                         <h3>Lab 5: Room Database</h3>
                         <p><strong>Reflection:</strong> Implemented local persistence using Room. Understanding DAOs, Entities, and Coroutines was challenging but essential for creating offline-capable applications.</p>
+                        <div class="action-row">
+                            <a href="https://drive.google.com/drive/folders/1wt4-Ljb6zLrnfaHnqDmRypxiBwavRsV4?usp=sharing" class="btn btn-secondary" target="_blank">📂 Screen Folder</a>
+                        </div>
                     </div>
                 </div>
 
@@ -301,7 +339,9 @@
                         <h3>Project 1: VitalityApp Prototype</h3>
                         <p><strong>Problem:</strong> Many individuals struggle with inconsistent health management because they lack a single, centralized tool to track physical habits and mental reflections.</p>
                         <p><strong>Lessons Learned:</strong> Successfully built a multi-screen application using Jetpack Compose and Navigation. I learned how to share and hoist state using a centralized ViewModel to ensure user data survives screen rotations.</p>
-                        <a href="https://github.com/Harith041004/A221072_ABDULLAHHARITH_MrNelson_Project1" class="btn" target="_blank">View on GitHub</a>
+                        <div class="action-row">
+                            <a href="https://github.com/Harith041004/A221072_ABDULLAHHARITH_MrNelson_Project1" class="btn" target="_blank">View on GitHub</a>
+                        </div>
                     </div>
                 </div>
 
@@ -313,7 +353,9 @@
                         <h3>Project 2: VitalityApp Ecosystem</h3>
                         <p><strong>Problem:</strong> Expanding on Project 1, users need their fitness actions verified and synced remotely to stay motivated within a community.</p>
                         <p><strong>Lessons Learned:</strong> Integrated advanced hardware sensors using Google ML Kit (CameraX Face Detection) to track push-ups. I successfully connected a local Room database with remote Firebase Firestore and utilized Retrofit to fetch live REST API data.</p>
-                        <a href="https://github.com/Harith041004/A221072_ABDULLAHHARITH_MrNelson_PROJECT2" class="btn" target="_blank">View on GitHub</a>
+                        <div class="action-row">
+                            <a href="https://github.com/Harith041004/A221072_ABDULLAHHARITH_MrNelson_PROJECT2" class="btn" target="_blank">View on GitHub</a>
+                        </div>
                     </div>
                 </div>
 
@@ -343,9 +385,17 @@
             </div>
 
             <h3 style="text-align: center; margin-top: 3rem; color: var(--primary-dark);">Resources & Acknowledgements</h3>
-            <div class="profile-header" style="text-align: center; margin-top: 1rem;">
-                <p><strong>APIs & Libraries:</strong> ZenQuotes REST API, Google ML Kit Vision API, AndroidX Camera Libraries, Firebase Android SDK.</p>
-                <p><strong>Acknowledgements:</strong> AI assistance was utilized for debugging complex recomposition UI issues, verifying UML/DFD documentation architecture, and structuring formatting for this e-Portfolio.</p>
+            <div class="profile-header" style="text-align: left; margin-top: 1rem;">
+                <ul style="list-style-position: inside; padding-left: 0; line-height: 1.8;">
+                    <li><strong>Android Developers Codelabs:</strong> Happy Birthday Card, Tip Calculator, Woof, Cupcake, and Room pathways used throughout Labs 1–5.</li>
+                    <li><strong>Material 3 Theme Builder:</strong> (m3.material.io/theme-builder) — used in Lab 3 to generate the VitalityApp colour palette.</li>
+                    <li><strong>ZenQuotes REST API:</strong> Free public API used to fetch dynamic, live motivational quotes for the Community Board.</li>
+                    <li><strong>Google ML Kit Vision API & CameraX:</strong> Hardware sensor integration for real-time face detection and push-up tracking.</li>
+                    <li><strong>Firebase Firestore:</strong> Cloud NoSQL database used to sync user workouts and community fitness posts.</li>
+                    <li><strong>Retrofit2, OkHttp, Gson:</strong> Networking and JSON parsing libraries used to connect and parse data from the ZenQuotes API.</li>
+                    <li><strong>Room (AndroidX):</strong> Local SQLite persistence for saving user push-up history offline.</li>
+                    <li><strong>AI Assistance:</strong> Claude (Anthropic) and Gemini (Google) were used throughout this project for debugging support, UI recomposition review, verifying UML/DFD architecture, and structuring this e-Portfolio.</li>
+                </ul>
             </div>
         </section>
 
